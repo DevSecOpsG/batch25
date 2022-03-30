@@ -1,0 +1,25 @@
+This installation is specific to systems operating on Ubuntu.   Follow the below steps:
+Step 1: Install Java
+$ sudo apt update
+$ sudo apt install openjdk-8-jdk
+
+done 
+
+Step 2: Add Jenkins Repository i.e key
+$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+Step 3: Add Jenkins repo to the system i.e source list
+$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+
+Step 4: Install Jenkins
+$ sudo apt update
+
+
+
+$ sudo apt install jenkins
+
+Done 
+
+
+Step 5: Verify installation
+$ systemctl status jenkins
