@@ -1,0 +1,59 @@
+pipeline {
+     agent any
+     stages{
+        stage(‘’){
+          steps{
+
+           }
+        }
+     }
+ }
+
+
+
+
+
+
+pipeline {
+     agent any
+     stages{
+        stage('copy code from github'){
+          steps{
+				git branch: 'main', url: 'https://github.com/DevSecOpsG/Pet-application-ci-maven'
+           }
+        }
+     }
+ }
+
+
+-------------------
+freestyle project
+
+git clone
+javac helloworld.java
+java Simple
+
+-----------------
+
+
+pipeline {
+agent any
+    stages {
+        stage('Git clone') {
+            steps {
+            git branch: 'main', url: 'https://github.com/DevSecOpsG/Pet-application-ci-maven'
+            }
+        }
+        stage('Build'){
+            steps{
+            sh 'mvn package'
+            } 
+        }
+        stage('send email notification'){
+            steps{
+            mail bcc: 'akansha@gmail.com', body: '''hello team ,
+			check result''', cc: 'gopi@gmail.com', from: '', replyTo: '', subject: 'this job completed check the result', to: 'ankur@gmail.com'
+            } 
+        }		
+    }
+}
