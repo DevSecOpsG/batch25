@@ -1,0 +1,74 @@
+
+
+
+vm
+apt-get install nginx
+systemctl start nginx    
+port 80 
+default web applicon 
+
+
+docker run -p 80:80 nginx
+
+
+docker run --name docker-nginx -p 80:80 nginx
+
+------
+
+mkdir -p ~/docker-nginx/html
+cd ~/docker-nginx/html
+vi index.html
+
+
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <title>Docker nginx Tutorial for batch25</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello Learning team batch25</h1>
+      <p>This nginx page is brought to you by Docker in front of akansha maya subhanshu </p>
+    </div>
+  </body>
+</html>
+
+
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+
+-----------------------------
+
+ubuntu jenkins innattation...
+
+docker run -it -d -p 8080:8080 jenkins/jenkins:latest
+
+
+image jenkins/jenkins
+container 
+
+
+vm  os 
+update       -- conf 
+java      -- bin version 
+add keys     -- conf 
+add source key
+update 
+install jenkins      bin / lib 
+
+------------
+
+win
+
+exe
+java jdk
+set path
+jenkns 
+8080
+ 
+
+
+
+
+
+
