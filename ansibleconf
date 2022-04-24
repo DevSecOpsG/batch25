@@ -39,14 +39,15 @@ apt install python ansible vim iputils-ping openssh-client -y
 ansible --version
 
 
-Optional step if requires then only (if /ect/config is not shwoing)
-if you are facing issue related to Python not installed then run 
+Optional step if requires then only (if /etc/config is not showing)
+if you are facing issue related to Python  or ansible not installed  then run 
 
 apt remove ansible -y
  apt update
+ apt install python2 -y
  apt install software-properties-common
  add-apt-repository --yes --update ppa:ansible/ansible
- apt install ansible
+ apt install ansible -y
 
 
 
